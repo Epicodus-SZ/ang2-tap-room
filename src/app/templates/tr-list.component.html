@@ -1,0 +1,22 @@
+    <h1>Kegs</h1>
+<div class="divTable">
+  <div class="divTableBody">
+    <div class="divTableRow">
+      <div class="divTableCell">ID</div>
+      <div class="divTableCell">Name</div>
+      <div class="divTableCell">Brand</div>
+      <div class="divTableCell">Price</div>
+      <div class="divTableCell">AC #</div>
+      <div class="divTableCell">Pints Left</div>
+    </div>
+    <div class="divTableRow" *ngFor="let keg of kegs">
+      <div class="divTableCell">{{keg.id}}</div>
+      <div class="divTableCell">{{keg.name}}</div>
+      <div class="divTableCell">{{keg.brand}}</div>
+      <div class="divTableCell">{{keg.price}}</div>
+      <div class="divTableCell">{{keg.ACAmount}}</div>
+      <div class="divTableCell">{{keg.PintCountLeft}}</div>
+    </div>
+  </div>
+</div>
+<!-- DivTable.com -->
