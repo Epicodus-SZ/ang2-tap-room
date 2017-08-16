@@ -1,1 +1,50 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+require("rxjs/add/operator/switchMap");
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var common_1 = require("@angular/common");
+var keg_model_1 = require("./keg.model");
+var keg_service_1 = require("./keg.service");
+var KegEditComponent = (function () {
+    function KegEditComponent(kegService, route, location) {
+        this.kegService = kegService;
+        this.route = route;
+        this.location = location;
+    }
+    KegEditComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.paramMap
+            .switchMap(function (params) { return _this.kegService.getKeg(+params.get('id')); })
+            .subscribe(function (keg) { return _this.childEditKeg = keg; });
+    };
+    KegEditComponent.prototype.goBack = function () {
+        this.location.back();
+    };
+    return KegEditComponent;
+}());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", keg_model_1.Keg)
+], KegEditComponent.prototype, "childEditKeg", void 0);
+KegEditComponent = __decorate([
+    core_1.Component({
+        selector: 'keg-edit',
+        templateUrl: './templates/keg-edit.component.html',
+        styleUrls: ['./css/keg-edit.component.css']
+    }),
+    __metadata("design:paramtypes", [keg_service_1.KegService,
+        router_1.ActivatedRoute,
+        common_1.Location])
+], KegEditComponent);
+exports.KegEditComponent = KegEditComponent;
 //# sourceMappingURL=tr-edit.component.js.map

@@ -16,6 +16,7 @@ var TRListComponent = (function () {
         //  private router: Router,
         kegService) {
         this.kegService = kegService;
+        this.kegClick = new core_1.EventEmitter();
     }
     //method to get all kegs from DB
     TRListComponent.prototype.getKegs = function () {
@@ -26,14 +27,18 @@ var TRListComponent = (function () {
     TRListComponent.prototype.ngOnInit = function () {
         this.getKegs();
     };
-    TRListComponent.prototype.onSelect = function (keg) {
-        this.selectedKeg = keg;
+    TRListComponent.prototype.editButtonHasBeenClicked = function (kegToEdit) {
+        this.kegClick.emit(kegToEdit);
     };
     TRListComponent.prototype.gotoDetail = function () {
         //  this.router.navigate(['/detail', this.selectedKeg.id]);
     };
     return TRListComponent;
 }());
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], TRListComponent.prototype, "kegClick", void 0);
 TRListComponent = __decorate([
     core_1.Component({
         selector: 'tr-list',

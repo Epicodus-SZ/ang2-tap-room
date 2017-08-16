@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 //import { Router } from '@angular/router';
 
 //our custom imports
@@ -14,7 +14,7 @@ export class TRListComponent implements OnInit {
   //list of kegs from our DB
   kegs: Keg[];
 
-  selectedKeg: Keg;
+  @Output() kegClick = new EventEmitter();
 
   constructor(
   //  private router: Router,
@@ -30,9 +30,9 @@ export class TRListComponent implements OnInit {
       this.getKegs();
     }
 
-    onSelect(keg: Keg): void {
-      this.selectedKeg = keg;
-    }
+    editButtonHasBeenClicked(kegToEdit: Keg) {
+        this.kegClick.emit(kegToEdit);
+      }
 
     gotoDetail(): void {
     //  this.router.navigate(['/detail', this.selectedKeg.id]);

@@ -5,6 +5,8 @@ import { FormsModule }    from '@angular/forms';
 import { AppComponent }         from './app.component';
 import { TRListComponent }         from './tr-list.component';
 import { KegService }         from './keg.service';
+import { KegDetailComponent }  from './tr-details.component';
+import { KegEditComponent }  from './tr-edit.component';
 
 // import { AppComponent }         from './app.component';
 // import { AppComponent }         from './app.component';
@@ -16,11 +18,14 @@ import { KegService }         from './keg.service';
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    TRListComponent
+    TRListComponent,
+    KegDetailComponent,
+    KegEditComponent
   ],
   providers: [ KegService ],
   bootstrap: [ AppComponent ]

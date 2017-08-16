@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Keg } from './keg.model';
 
 @Component({
   selector: 'my-app',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tap Room';
+
+  selectedKeg: Keg = null;
+
+  editKeg(clickedKeg: Keg) {
+  this.selectedKeg = clickedKeg;
+}
 }

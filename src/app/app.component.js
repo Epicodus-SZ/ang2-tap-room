@@ -10,7 +10,11 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tap Room';
+        this.selectedKeg = null;
     }
+    AppComponent.prototype.editKeg = function (clickedKeg) {
+        this.selectedKeg = clickedKeg;
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([

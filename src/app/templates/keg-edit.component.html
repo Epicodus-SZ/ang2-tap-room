@@ -1,0 +1,33 @@
+<div>
+  <h2>{{childEditKeg.name}} Edit</h2>
+  <div>
+    <label>id: </label>{{childEditKeg.id}}</div>
+  <div>
+    <div class="form-group">
+      <label for="name" class="col-lg-2 control-label">Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" value={{childEditKeg.name}} id="name" placeholder="Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="brand" class="col-lg-2 control-label">Brand</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" value={{childEditKeg.brand}} id="brand" placeholder="Brand">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="price" class="col-lg-2 control-label">Price</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" value={{childEditKeg.price}} id="brand" placeholder="Price">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="ac" class="col-lg-2 control-label">Alc %</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" value={{childEditKeg.ACAmount}} id="ac" placeholder="Alcohol Percentage">
+      </div>
+    </div>
+
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>
