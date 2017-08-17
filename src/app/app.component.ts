@@ -7,11 +7,13 @@ import { Keg } from './keg.model';
   styleUrls: ['./css/app.component.css'],
 })
 export class AppComponent {
-  title = 'Tap Room';
+  title = "Steve's Tap-a-rama";
 
+  // by default no keg is selected in the UI
   selectedKeg: Keg = null;
 
+  //method to capture when someone selects edit button in list component
   editKeg(clickedKeg: Keg) {
-  this.selectedKeg = clickedKeg;
-}
+    this.selectedKeg = clickedKeg;
+  }
 }

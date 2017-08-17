@@ -12,7 +12,6 @@ var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var tr_list_component_1 = require("./tr-list.component");
 var keg_service_1 = require("./keg.service");
-var tr_details_component_1 = require("./tr-details.component");
 var tr_edit_component_1 = require("./tr-edit.component");
 // import { AppComponent }         from './app.component';
 // import { AppComponent }         from './app.component';
@@ -34,7 +33,6 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             tr_list_component_1.TRListComponent,
-            tr_details_component_1.KegDetailComponent,
             tr_edit_component_1.KegEditComponent
         ],
         providers: [keg_service_1.KegService],

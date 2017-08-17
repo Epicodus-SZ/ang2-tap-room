@@ -11,6 +11,8 @@ import { KegService } from './keg.service';
   styleUrls: ['./css/app.component.css']
 })
 export class TRListComponent implements OnInit {
+  profitMargin: number = .8;
+
   //list of kegs from our DB
   kegs: Keg[];
 
@@ -31,10 +33,15 @@ export class TRListComponent implements OnInit {
     }
 
     editButtonHasBeenClicked(kegToEdit: Keg) {
-        this.kegClick.emit(kegToEdit);
-      }
+      this.kegClick.emit(kegToEdit);
+    }
 
     gotoDetail(): void {
     //  this.router.navigate(['/detail', this.selectedKeg.id]);
+    }
+
+    getPintPrice(keg: Keg): string {
+      var perPint: number = (keg.price)/100*(1+this.profitMargin);
+      return perPint.toFixed(2).toString();
     }
 }

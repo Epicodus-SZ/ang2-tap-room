@@ -9,9 +9,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Tap Room';
+        this.title = "Steve's Tap-a-rama";
+        // by default no keg is selected in the UI
         this.selectedKeg = null;
     }
+    //method to capture when someone selects edit button in list component
     AppComponent.prototype.editKeg = function (clickedKeg) {
         this.selectedKeg = clickedKeg;
     };

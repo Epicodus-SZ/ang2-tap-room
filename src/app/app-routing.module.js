@@ -9,11 +9,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var tr_list_component_1 = require("./tr-list.component");
-var tr_details_component_1 = require("./tr-details.component");
 var routes = [
     { path: '', redirectTo: '/', pathMatch: 'full' },
     // { path: 'dashboard',  component: DashboardComponent },
-    { path: 'detail/:id', component: tr_details_component_1.KegDetailComponent },
+    // { path: 'detail/:id', component: KegDetailComponent },
     { path: 'kegs', component: tr_list_component_1.TRListComponent }
 ];
 var AppRoutingModule = (function () {

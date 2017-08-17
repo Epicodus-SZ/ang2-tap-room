@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 // import 'rxjs/add/operator/switchMap';
 var core_1 = require("@angular/core");
-// import { FormsModule } from '@angular/forms';
 // import { ActivatedRoute, ParamMap } from '@angular/router';
 // import { Location }                 from '@angular/common';
 var keg_model_1 = require("./keg.model");
@@ -33,4 +32,4 @@ KegEditComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], KegEditComponent);
 exports.KegEditComponent = KegEditComponent;
-//# sourceMappingURL=tr-edit.component.js.map
+//# sourceMappingURL=tr-detail.component.js.map

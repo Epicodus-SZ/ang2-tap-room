@@ -1,6 +1,5 @@
 // import 'rxjs/add/operator/switchMap';
-import { Component, Input, Output }        from '@angular/core';
-// import { FormsModule } from '@angular/forms';
+import { Component, Input, Output, OnInit }        from '@angular/core';
 // import { ActivatedRoute, ParamMap } from '@angular/router';
 // import { Location }                 from '@angular/common';
 
@@ -21,8 +20,7 @@ export class KegEditComponent {
     // private kegService: KegService,
     // private route: ActivatedRoute,
     // private location: Location
-  ) {
-  }
+  ) {}
 
   // ngOnInit(): void {
   //   this.route.paramMap

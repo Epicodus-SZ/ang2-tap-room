@@ -16,6 +16,7 @@ var TRListComponent = (function () {
         //  private router: Router,
         kegService) {
         this.kegService = kegService;
+        this.profitMargin = .8;
         this.kegClick = new core_1.EventEmitter();
     }
     //method to get all kegs from DB
@@ -32,6 +33,10 @@ var TRListComponent = (function () {
     };
     TRListComponent.prototype.gotoDetail = function () {
         //  this.router.navigate(['/detail', this.selectedKeg.id]);
+    };
+    TRListComponent.prototype.getPintPrice = function (keg) {
+        var perPint = (keg.price) / 100 * (1 + this.profitMargin);
+        return perPint.toFixed(2).toString();
     };
     return TRListComponent;
 }());

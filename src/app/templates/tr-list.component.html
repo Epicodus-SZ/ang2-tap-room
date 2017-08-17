@@ -8,6 +8,7 @@
       <div class="divTableCell">Price</div>
       <div class="divTableCell">AC #</div>
       <div class="divTableCell">Pints Left</div>
+      <div class="divTableCell">$/Pint</div>
     </div>
     <div class="divTableRow" *ngFor="let keg of kegs">
       <div class="divTableCell">{{keg.id}}</div>
@@ -16,6 +17,7 @@
       <div class="divTableCell">{{keg.price}}</div>
       <div class="divTableCell">{{keg.ACAmount}}</div>
       <div class="divTableCell">{{keg.PintCountLeft}}</div>
+      <div class="divTableCell">{{getPintPrice(keg)}}</div>
       <div><button (click)="editButtonHasBeenClicked(keg)">Edit</button></div>
     </div>
   </div>

@@ -5,7 +5,6 @@ import { FormsModule }    from '@angular/forms';
 import { AppComponent }         from './app.component';
 import { TRListComponent }         from './tr-list.component';
 import { KegService }         from './keg.service';
-import { KegDetailComponent }  from './tr-details.component';
 import { KegEditComponent }  from './tr-edit.component';
 
 // import { AppComponent }         from './app.component';
@@ -24,7 +23,6 @@ import { KegEditComponent }  from './tr-edit.component';
   declarations: [
     AppComponent,
     TRListComponent,
-    KegDetailComponent,
     KegEditComponent
   ],
   providers: [ KegService ],
